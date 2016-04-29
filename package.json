@@ -1,0 +1,31 @@
+{
+  "name": "accenture",
+  "version": "1.0.0",
+  "description": "Creating Angular app with playlists and artists list using Spotify api",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssthil/Angular-App-Spotify.git"
+  },
+  "keywords": [
+    "angularjs",
+    "spotify",
+    "api"
+  ],
+  "author": "senthil sivaramakrishnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssthil/Angular-App-Spotify/issues"
+  },
+  "homepage": "https://github.com/ssthil/Angular-App-Spotify#readme",
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "grunt": "^1.0.1",
+    "grunt-connect": "^0.2.0"
+  }
+}

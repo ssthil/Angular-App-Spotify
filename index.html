@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs with spotify api</title>
+    <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-controller="MainCtrl">
+    <!-- search container -->
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">Spotify</a>
+            </div>
+            <div class="search-container">
+                <form class="form-inline">
+                    <input type="text" class="form-control" id="inputPassword2" placeholder="Enter your que" ng-model="searchValue">
+                    <div class="form-group">
+                        <select class="form-control selectdropdown" ng-model="selected_value" ng-options="value.name for value in dropdownvalue " ng-change="getData()">
+                            <option value="">Select</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- image holder -->
+    <div class="container margin-top">
+        <div ng-repeat="data in mydata" class="img-holder">
+            <ul>
+                <span class="name-details">{{data.name}}</span>
+                <li ng-repeat="first in data.images" ng-if="$index < 1">
+                    <img ng-src="{{first.url}}" />
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
